@@ -6,27 +6,47 @@ template: splash
 
 import ServicePillars from '../../components/ServicePillars.astro';
 
-<div class="not-content max-w-4xl mx-auto text-center mb-12">
-  <p class="text-xl text-slate-400">
-    We don't offer a menu of 100 things. We offer three pillars of growth designed to work in unison.
-  </p>
+
+<div class="not-content pt-16 pb-12 relative">
+    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="block text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            The <span class="text-gradient">Growth Trinity</span>
+        </h1>
+        <p class="mt-4 text-xl text-gray-400 max-w-3xl mx-auto">
+            We don't offer a menu of 100 things. We offer three pillars of growth designed to work in unison.
+        </p>
+    </div>
 </div>
 
 <ServicePillars />
 
-<div class="not-content mt-20 border-t border-slate-800 pt-12">
-    <h2 class="text-3xl font-bold text-center mb-12">Deep Dive</h2>
-    
-    <div class="space-y-16 max-w-4xl mx-auto">
-        <div class="flex flex-col md:flex-row gap-8 items-center">
-            <div class="flex-1">
-                <h3 class="text-2xl font-bold text-white mb-4">1. Enterprise Infrastructure</h3>
-                <p class="text-slate-400">
-                    Wordpress plugins won't cut it anymore. We deploy <strong>Headless architectures</strong> using <strong>Astro</strong> or <strong>Next.js</strong> on the frontend, backed by robust <strong>C# / .NET Core APIs</strong>. This ensures sub-second load times, bank-grade security, and the ability to handle traffic surges without crashing.
-                </p>
-            </div>
-            <div class="flex-1 rounded-lg border border-slate-800 bg-slate-900 p-6 text-xs shadow-inner">
 
+<div class="not-content max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-20 mx-auto">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-white sm:text-4xl">Technical Deep Dive</h2>
+        <p class="mt-2 text-gray-400">How we execute on our promises.</p>
+    </div>
+    
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-24">
+        <div>
+            <h3 class="text-2xl font-bold text-white mb-4">1. Enterprise Infrastructure</h3>
+            <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                Wordpress plugins won't cut it anymore. We deploy <strong>Headless architectures</strong> using <strong>Astro</strong> or <strong>Next.js</strong> on the frontend, backed by robust <strong>C# / .NET Core APIs</strong>. This ensures sub-second load times, bank-grade security, and the ability to handle traffic surges without crashing.
+            </p>
+            <ul class="space-y-3">
+                <li class="flex items-center gap-3 text-gray-300">
+                    <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Edge-cached Global Delivery
+                </li>
+                <li class="flex items-center gap-3 text-gray-300">
+                    <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Type-Safe APIs
+                </li>
+            </ul>
+        </div>
+         <div class="glass-panel rounded-2xl p-6 relative">
+            <div class="absolute -top-4 -right-4 w-20 h-20 bg-indigo-500/20 rounded-full blur-xl -z-10"></div>
+<div class="text-sm font-mono text-gray-300">
 ```js
 // The Starlight Standard
 const performance = {
@@ -35,18 +55,14 @@ const performance = {
   uptime: "99.99%"
 };
 ```
-            </div>
+</div>
         </div>
+    </div>
 
-        <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
-            <div class="flex-1">
-                <h3 class="text-2xl font-bold text-white mb-4">2. Acquisition & CRO</h3>
-                <p class="text-slate-400">
-                    Traffic is useless if it doesn't convert. We design high-intent funnels and manage ad spend across Google and LinkedIn. Our <strong>Conversion Rate Optimization (CRO)</strong> process uses heatmaps and A/B testing to turn visitors into revenue.
-                </p>
-            </div>
-            <div class="flex-1 rounded-lg border border-slate-800 bg-slate-900 p-6 text-xs shadow-inner">
-
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-24">
+        <div class="order-2 lg:order-1 glass-panel rounded-2xl p-6 relative">
+             <div class="absolute -bottom-4 -left-4 w-20 h-20 bg-purple-500/20 rounded-full blur-xl -z-10"></div>
+<div class="text-sm font-mono text-gray-300">
 ```js
 // The Funnel Math
 if (conversionRate > 2.5%) {
@@ -55,18 +71,46 @@ if (conversionRate > 2.5%) {
   optimizeLPs();
 }
 ```
-            </div>
+</div>
         </div>
+        <div class="order-1 lg:order-2">
+            <h3 class="text-2xl font-bold text-white mb-4">2. Acquisition & CRO</h3>
+            <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                Traffic is useless if it doesn't convert. We design high-intent funnels and manage ad spend across Google and LinkedIn. Our <strong>Conversion Rate Optimization (CRO)</strong> process uses heatmaps and A/B testing to turn visitors into revenue.
+            </p>
+             <ul class="space-y-3">
+                <li class="flex items-center gap-3 text-gray-300">
+                    <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    A/B Tested Landing Pages
+                </li>
+                <li class="flex items-center gap-3 text-gray-300">
+                    <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Real-time ROI Tracking
+                </li>
+            </ul>
+        </div>
+    </div>
 
-        <div class="flex flex-col md:flex-row gap-8 items-center">
-             <div class="flex-1">
-                <h3 class="text-2xl font-bold text-white mb-4">3. AI Leverage</h3>
-                <p class="text-slate-400">
-                    We build custom <strong>RAG (Retrieval-Augmented Generation)</strong> agents that know your business inside and out. They handle customer support, qualify leads, and automate data entry, freeing your human team to do high-value work.
-                </p>
-            </div>
-            <div class="flex-1 rounded-lg border border-slate-800 bg-slate-900 p-6 text-xs shadow-inner">
-
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+         <div>
+            <h3 class="text-2xl font-bold text-white mb-4">3. AI Leverage</h3>
+            <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                We build custom <strong>RAG (Retrieval-Augmented Generation)</strong> agents that know your business inside and out. They handle customer support, qualify leads, and automate data entry, freeing your human team to do high-value work.
+            </p>
+             <ul class="space-y-3">
+                <li class="flex items-center gap-3 text-gray-300">
+                    <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    24/7 Autonomous Support
+                </li>
+                <li class="flex items-center gap-3 text-gray-300">
+                    <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Instant Lead Qualification
+                </li>
+            </ul>
+        </div>
+        <div class="glass-panel rounded-2xl p-6 relative">
+            <div class="absolute -top-4 -right-4 w-20 h-20 bg-emerald-500/20 rounded-full blur-xl -z-10"></div>
+<div class="text-sm font-mono text-gray-300">
 ```js
 // AI Workflow
 async function qualifyLead(prospect) {
@@ -75,7 +119,7 @@ async function qualifyLead(prospect) {
   return nurtureCampaign();
 }
 ```
-            </div>
+</div>
         </div>
     </div>
 </div>

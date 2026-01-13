@@ -1,97 +1,97 @@
 ---
 ---
-<div class="not-content max-w-3xl mx-auto my-12 space-y-12">
+<div class="not-content max-w-4xl mx-auto my-12 grid lg:grid-cols-3 gap-8">
     <!-- Interactive Checklist -->
-    <div class="bg-slate-900 rounded-xl border border-slate-700 p-8 shadow-xl">
-        <h2 class="text-2xl font-bold text-white mb-6">Self-Audit Checklist</h2>
-        <p class="text-slate-400 mb-8">Score your current digital maturity. 7/10 is the benchmark for scalability.</p>
+    <div class="lg:col-span-2 glass-panel rounded-2xl border border-gray-800 p-8 shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-600/10 rounded-full blur-3xl -z-10"></div>
+        
+        <h2 class="text-2xl font-bold text-white mb-2">Self-Audit Checklist</h2>
+        <p class="text-gray-400 mb-8 text-sm">Score your current digital maturity. 7/10 is the benchmark for scalability.</p>
         
         <div id="checklist-container" class="space-y-3">
-            <!-- Checklist items will be interactive -->
-            <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
-                <span class="text-slate-300 group-hover:text-white">Website loads in under 1.5 seconds (mobile)</span>
+            <label class="flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition cursor-pointer group border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="h-5 w-5 accent-indigo-600 rounded bg-gray-800 border-gray-600 focus:ring-offset-gray-900 cursor-pointer" />
+                <span class="text-gray-300 group-hover:text-white text-sm font-medium">Website loads in under 1.5 seconds (mobile)</span>
             </label>
-            <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
-                <span class="text-slate-300 group-hover:text-white">CRM is automatically updated with lead source</span>
+            <label class="flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition cursor-pointer group border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="h-5 w-5 accent-indigo-600 rounded bg-gray-800 border-gray-600 focus:ring-offset-gray-900 cursor-pointer" />
+                <span class="text-gray-300 group-hover:text-white text-sm font-medium">CRM is automatically updated with lead source</span>
             </label>
-            <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
-                <span class="text-slate-300 group-hover:text-white">Ad spend is tracked against Customer Lifetime Value (LTV)</span>
+            <label class="flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition cursor-pointer group border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="h-5 w-5 accent-indigo-600 rounded bg-gray-800 border-gray-600 focus:ring-offset-gray-900 cursor-pointer" />
+                <span class="text-gray-300 group-hover:text-white text-sm font-medium">Ad spend is tracked against LTV</span>
             </label>
-             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
-                <span class="text-slate-300 group-hover:text-white">Leads receive an instant personalized follow-up (SMS/Email)</span>
+             <label class="flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition cursor-pointer group border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="h-5 w-5 accent-indigo-600 rounded bg-gray-800 border-gray-600 focus:ring-offset-gray-900 cursor-pointer" />
+                <span class="text-gray-300 group-hover:text-white text-sm font-medium">Leads receive instant personalized follow-up</span>
             </label>
-             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
-                <span class="text-slate-300 group-hover:text-white">Sales team only speaks to qualified prospects</span>
+             <label class="flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition cursor-pointer group border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="h-5 w-5 accent-indigo-600 rounded bg-gray-800 border-gray-600 focus:ring-offset-gray-900 cursor-pointer" />
+                <span class="text-gray-300 group-hover:text-white text-sm font-medium">Sales team only speaks to qualified prospects</span>
             </label>
-             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
-                <span class="text-slate-300 group-hover:text-white">Content is CMS-managed, not hardcoded</span>
+             <label class="flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition cursor-pointer group border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="h-5 w-5 accent-indigo-600 rounded bg-gray-800 border-gray-600 focus:ring-offset-gray-900 cursor-pointer" />
+                <span class="text-gray-300 group-hover:text-white text-sm font-medium">Content is CMS-managed, not hardcoded</span>
             </label>
-             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
-                <span class="text-slate-300 group-hover:text-white">Analytics dashboard shows real-time revenue, not just hits</span>
+             <label class="flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition cursor-pointer group border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="h-5 w-5 accent-indigo-600 rounded bg-gray-800 border-gray-600 focus:ring-offset-gray-900 cursor-pointer" />
+                <span class="text-gray-300 group-hover:text-white text-sm font-medium">Analytics dashboard shows real-time revenue</span>
             </label>
-             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
-                <span class="text-slate-300 group-hover:text-white">Infrastructure scales automatically during traffic spikes</span>
+             <label class="flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition cursor-pointer group border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="h-5 w-5 accent-indigo-600 rounded bg-gray-800 border-gray-600 focus:ring-offset-gray-900 cursor-pointer" />
+                <span class="text-gray-300 group-hover:text-white text-sm font-medium">Infrastructure scales automatically</span>
             </label>
-             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
-                <span class="text-slate-300 group-hover:text-white">Customer support queries are partially handled by AI (Tier 1)</span>
+             <label class="flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition cursor-pointer group border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="h-5 w-5 accent-indigo-600 rounded bg-gray-800 border-gray-600 focus:ring-offset-gray-900 cursor-pointer" />
+                <span class="text-gray-300 group-hover:text-white text-sm font-medium">Support queries handled by AI (Tier 1)</span>
             </label>
-             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
-                <span class="text-slate-300 group-hover:text-white">Deployment pipeline is automated (CI/CD)</span>
+             <label class="flex items-center space-x-4 p-3 rounded-xl hover:bg-white/5 transition cursor-pointer group border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="h-5 w-5 accent-indigo-600 rounded bg-gray-800 border-gray-600 focus:ring-offset-gray-900 cursor-pointer" />
+                <span class="text-gray-300 group-hover:text-white text-sm font-medium">Deployment pipeline is automated (CI/CD)</span>
             </label>
         </div>
 
-        <div class="mt-8 border-t border-slate-700 pt-6">
+        <div class="mt-8 border-t border-gray-700 pt-6">
             <div class="flex justify-between items-center">
-                <span class="text-lg font-medium text-slate-300">Your Score:</span>
-                <span id="score-display" class="text-4xl font-bold text-blue-500">0/10</span>
+                <span class="text-lg font-medium text-gray-300">Your Score:</span>
+                <span id="score-display" class="text-4xl font-bold text-indigo-500">0/10</span>
             </div>
-            <p id="score-message" class="text-right text-sm text-slate-400 mt-2">Select items to calculate.</p>
+            <p id="score-message" class="text-right text-sm text-gray-500 mt-2">Select items to calculate.</p>
         </div>
     </div>
 
     <!-- Intake Form -->
-    <div class="bg-slate-800/50 rounded-xl border border-slate-700 p-8">
-        <h3 class="text-xl font-bold text-white mb-4">Request a Full Technical Audit</h3>
-        <p class="text-slate-400 mb-6 text-sm">We'll dive deep into your stack and identify the exact bottlenecks costing you revenue.</p>
+    <div class="glass-panel rounded-2xl p-6 border border-gray-800 h-fit sticky top-24">
+        <h3 class="text-xl font-bold text-white mb-4">Get a Full Audit</h3>
+        <p class="text-gray-400 mb-6 text-xs">We'll dive deep into your stack and identify bottlenecks.</p>
         
         <form name="audit-request" method="POST" data-netlify="true" class="space-y-4">
              <input type="hidden" name="form-name" value="audit-request" />
-             <!-- Hidden field for checklist score -->
              <input type="hidden" name="checklist-score" id="form-score" value="0" />
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="space-y-4">
                 <div>
-                    <label for="name" class="block text-xs font-medium text-slate-400 uppercase mb-1">Name</label>
-                    <input type="text" id="name" name="name" required class="w-full rounded bg-slate-900 border border-slate-600 text-white px-4 py-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition" />
+                    <label for="name" class="block text-xs font-medium text-gray-500 uppercase mb-1">Name</label>
+                    <input type="text" id="name" name="name" required class="w-full rounded-lg bg-gray-900 border border-gray-700 text-white px-4 py-2.5 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition text-sm" />
                 </div>
                 <div>
-                    <label for="email" class="block text-xs font-medium text-slate-400 uppercase mb-1">Work Email</label>
-                    <input type="email" id="email" name="email" required class="w-full rounded bg-slate-900 border border-slate-600 text-white px-4 py-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition" />
+                    <label for="email" class="block text-xs font-medium text-gray-500 uppercase mb-1">Work Email</label>
+                    <input type="email" id="email" name="email" required class="w-full rounded-lg bg-gray-900 border border-gray-700 text-white px-4 py-2.5 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition text-sm" />
                 </div>
-            </div>
             
-            <div>
-                <label for="company" class="block text-xs font-medium text-slate-400 uppercase mb-1">Company URL</label>
-                <input type="url" id="company" name="company" placeholder="https://" class="w-full rounded bg-slate-900 border border-slate-600 text-white px-4 py-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition" />
+                <div>
+                    <label for="company" class="block text-xs font-medium text-gray-500 uppercase mb-1">Company URL</label>
+                    <input type="url" id="company" name="company" placeholder="https://" class="w-full rounded-lg bg-gray-900 border border-gray-700 text-white px-4 py-2.5 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition text-sm" />
+                </div>
+
+                <div>
+                    <label for="message" class="block text-xs font-medium text-gray-500 uppercase mb-1">Biggest Challenge</label>
+                    <textarea id="message" name="message" rows="3" class="w-full rounded-lg bg-gray-900 border border-gray-700 text-white px-4 py-2.5 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition text-sm"></textarea>
+                </div>
             </div>
 
-            <div>
-                <label for="message" class="block text-xs font-medium text-slate-400 uppercase mb-1">Biggest Challenge</label>
-                <textarea id="message" name="message" rows="3" class="w-full rounded bg-slate-900 border border-slate-600 text-white px-4 py-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition"></textarea>
-            </div>
-
-            <button type="submit" class="w-full rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 transition shadow-lg shadow-blue-600/20">
-                Submit Request
+            <button type="submit" class="w-full mt-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 transition shadow-lg shadow-indigo-600/20 text-sm">
+                Request Audit
             </button>
         </form>
     </div>
@@ -113,22 +113,19 @@
 
             if (checkedCount < 4) {
                 scoreMessage!.textContent = "Significant optimization opportunities available.";
-                scoreMessage!.className = "text-right text-sm text-red-400 mt-2";
+                scoreMessage!.className = "text-right text-xs text-red-400 mt-2 font-medium";
             } else if (checkedCount < 8) {
                 scoreMessage!.textContent = "Good foundation, but scaling may be hindered.";
-                scoreMessage!.className = "text-right text-sm text-yellow-400 mt-2";
+                scoreMessage!.className = "text-right text-xs text-yellow-400 mt-2 font-medium";
             } else {
                 scoreMessage!.textContent = "Excellent. You are ready for hyper-growth.";
-                scoreMessage!.className = "text-right text-sm text-emerald-400 mt-2";
+                scoreMessage!.className = "text-right text-xs text-emerald-400 mt-2 font-medium";
             }
         }
 
         checkboxes.forEach(cb => cb.addEventListener('change', updateScore));
     }
 
-    // Run on initial load
     initChecklist();
-
-    // Run on view transitions (if enabled in Starlight)
     document.addEventListener('astro:page-load', initChecklist);
 </script>

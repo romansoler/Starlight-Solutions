@@ -6,10 +6,16 @@ template: splash
 
 import AuditChecklist from '../../components/AuditChecklist.astro';
 
-<div class="not-content max-w-4xl mx-auto text-center mb-12">
-  <p class="text-xl text-slate-400">
-    Are you ready to scale, or will your systems break under pressure? Take the 2-minute assessment.
-  </p>
+
+<div class="not-content pt-16 pb-8 text-center relative">
+    <div class="max-w-3xl mx-auto px-4">
+        <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+            Audit Your <span class="text-gradient">Stack</span>
+        </h1>
+        <p class="mt-4 text-xl text-gray-400">
+            Are you ready to scale, or will your systems break under pressure? Take the 2-minute assessment.
+        </p>
+    </div>
 </div>
 
 <AuditChecklist />
