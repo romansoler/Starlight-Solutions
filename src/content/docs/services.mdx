@@ -1,0 +1,81 @@
+---
+title: Our Services
+description: Infrastructure, Acquisition, and Leverage.
+template: splash
+---
+
+import ServicePillars from '../../components/ServicePillars.astro';
+
+<div class="max-w-4xl mx-auto text-center mb-12">
+  <p class="text-xl text-slate-400">
+    We don't offer a menu of 100 things. We offer three pillars of growth designed to work in unison.
+  </p>
+</div>
+
+<ServicePillars />
+
+<div class="mt-20 border-t border-slate-800 pt-12">
+    <h2 class="text-3xl font-bold text-center mb-12">Deep Dive</h2>
+    
+    <div class="space-y-16 max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+            <div class="flex-1">
+                <h3 class="text-2xl font-bold text-white mb-4">1. Enterprise Infrastructure</h3>
+                <p class="text-slate-400">
+                    Wordpress plugins won't cut it anymore. We deploy <strong>Headless architectures</strong> using <strong>Astro</strong> or <strong>Next.js</strong> on the frontend, backed by robust <strong>C# / .NET Core APIs</strong>. This ensures sub-second load times, bank-grade security, and the ability to handle traffic surges without crashing.
+                </p>
+            </div>
+            <div class="flex-1 rounded-lg border border-slate-800 bg-slate-900 p-6 text-xs shadow-inner">
+
+```js
+// The Starlight Standard
+const performance = {
+  loadTime: "0.6s",
+  lighthouseScore: 100,
+  uptime: "99.99%"
+};
+```
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
+            <div class="flex-1">
+                <h3 class="text-2xl font-bold text-white mb-4">2. Acquisition & CRO</h3>
+                <p class="text-slate-400">
+                    Traffic is useless if it doesn't convert. We design high-intent funnels and manage ad spend across Google and LinkedIn. Our <strong>Conversion Rate Optimization (CRO)</strong> process uses heatmaps and A/B testing to turn visitors into revenue.
+                </p>
+            </div>
+            <div class="flex-1 rounded-lg border border-slate-800 bg-slate-900 p-6 text-xs shadow-inner">
+
+```js
+// The Funnel Math
+if (conversionRate > 2.5%) {
+  scaleAdSpend(true);
+} else {
+  optimizeLPs();
+}
+```
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+             <div class="flex-1">
+                <h3 class="text-2xl font-bold text-white mb-4">3. AI Leverage</h3>
+                <p class="text-slate-400">
+                    We build custom <strong>RAG (Retrieval-Augmented Generation)</strong> agents that know your business inside and out. They handle customer support, qualify leads, and automate data entry, freeing your human team to do high-value work.
+                </p>
+            </div>
+            <div class="flex-1 rounded-lg border border-slate-800 bg-slate-900 p-6 text-xs shadow-inner">
+
+```js
+// AI Workflow
+async function qualifyLead(prospect) {
+  const intent = await ai.analyze(prospect);
+  if (intent.score > 80) return notifySales();
+  return nurtureCampaign();
+}
+```
+            </div>
+        </div>
+    </div>
+</div>

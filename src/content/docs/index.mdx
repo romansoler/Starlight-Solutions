@@ -1,0 +1,58 @@
+---
+title: Unlocking Enterprise-Grade Tech for the Mid-Market
+description: Stop bleeding revenue. Start scaling with precision infrastructure and AI leverage.
+template: splash
+hero:
+  tagline: Stop bleeding revenue. Start scaling with precision infrastructure and AI leverage.
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: Audit Your Stack
+      link: /audit
+      icon: right-arrow
+      variant: primary
+    - text: View Services
+      link: /services
+      icon: external
+---
+
+import RevenueTable from '../../components/RevenueTable.astro';
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<div class="hero-section text-center max-w-4xl mx-auto mb-16">
+  <p class="text-xl text-slate-400">
+    The gap between "functional" and "high-performance" is where profit disappears. 
+    Starlight Solutions bridges that gap.
+  </p>
+</div>
+
+## The Cost of Inefficiency
+
+Most mid-market companies are leaking revenue through slow infrastructure and manual processes. See the difference:
+
+<RevenueTable />
+
+<div class="my-20">
+  <h2 class="text-3xl font-bold text-center mb-8">Why Starlight?</h2>
+  <CardGrid stagger>
+    <Card title="Speed as a Feature" icon="rocket">
+      We don't just optimize; we rebuild for instantaneous load times. Google rewards speed, and so do your customers.
+    </Card>
+    <Card title="Data, Not Guesswork" icon="magnifier">
+      Every decision is backed by comprehensive tracking. We know exactly where your leads come from and what they cost.
+    </Card>
+    <Card title="AI Leverage" icon="setting">
+      Replace repetitive manual tasks with intelligent agents. Support, qualification, and data entry—automated.
+    </Card>
+    <Card title="Scalable Architecture" icon="laptop">
+      Built on .NET and Next.js, our systems grow with you. No more "rewriting the app" when you hit 10k users.
+    </Card>
+  </CardGrid>
+</div>
+
+<div class="text-center my-16 p-8 bg-slate-900 rounded-xl border border-slate-800">
+  <h3 class="text-2xl font-bold text-white mb-4">Ready to stop the leak?</h3>
+  <a href="/audit" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg transition">
+    Get Your Free Audit
+  </a>
+</div>

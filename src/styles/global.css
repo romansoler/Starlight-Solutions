@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* Dark Mode Enterprise Tech Theme */
+:root {
+	/* Main colors */
+	--sl-color-accent-low: #1e293b;
+	--sl-color-accent: #3b82f6;
+	--sl-color-accent-high: #93c5fd;
+	
+	/* Backgrounds */
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #f1f5f9;
+	--sl-color-gray-2: #e2e8f0;
+	--sl-color-gray-3: #cbd5e1;
+	--sl-color-gray-4: #94a3b8;
+	--sl-color-gray-5: #64748b;
+	--sl-color-gray-6: #475569;
+	
+	--sl-color-black: #020617; /* Slate 950 */
+	--sl-color-bg: #020617;
+	--sl-color-bg-nav: #0f172a; /* Slate 900 */
+	--sl-color-bg-sidebar: #0f172a;
+	--sl-color-bg-inline-code: #1e293b;
+	
+	/* Borders */
+	--sl-color-hairline-light: #334155;
+	--sl-color-hairline: #1e293b;
+	
+    /* Typography adjustments for "sharp" look */
+    --sl-text-sm: 0.875rem;
+    --sl-text-base: 1rem;
+    --sl-text-lg: 1.125rem;
+    --sl-text-xl: 1.25rem;
+    --sl-text-2xl: 1.5rem;
+    --sl-text-3xl: 1.875rem;
+    --sl-text-4xl: 2.25rem;
+    --sl-text-5xl: 3rem;
+    --sl-text-6xl: 3.75rem;
+}
+
+/* Force dark mode preference if not auto-detected, 
+   though Starlight handles this via config usually. 
+   We want the 'dark' look to be the primary one. */
+:root[data-theme='light'] {
+    /* Invert for light mode if user switches, but keep it "Enterprise" clean */
+    --sl-color-accent-low: #dbeafe;
+	--sl-color-accent: #2563eb;
+	--sl-color-accent-high: #1e40af;
+    --sl-color-bg: #ffffff;
+    --sl-color-bg-nav: #f8fafc;
+    --sl-color-bg-sidebar: #f8fafc;
+}
+
+/* Sharper corners for a more "tech" feel */
+.sl-markdown-content pre {
+    border-radius: 4px;
+    border: 1px solid var(--sl-color-hairline-light);
+}
+
+img {
+    border-radius: 4px;
+}
+
+/* Sidebar adjustments */
+.sidebar-content {
+    border-right: 1px solid var(--sl-color-hairline);
+}

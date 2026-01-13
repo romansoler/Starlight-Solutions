@@ -1,0 +1,125 @@
+---
+---
+<div class="max-w-3xl mx-auto my-12 space-y-12">
+    <!-- Interactive Checklist -->
+    <div class="bg-slate-900 rounded-xl border border-slate-700 p-8 shadow-xl">
+        <h2 class="text-2xl font-bold text-white mb-6">Self-Audit Checklist</h2>
+        <p class="text-slate-400 mb-8">Score your current digital maturity. 7/10 is the benchmark for scalability.</p>
+        
+        <div id="checklist-container" class="space-y-3">
+            <!-- Checklist items will be interactive -->
+            <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <span class="text-slate-300 group-hover:text-white">Website loads in under 1.5 seconds (mobile)</span>
+            </label>
+            <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <span class="text-slate-300 group-hover:text-white">CRM is automatically updated with lead source</span>
+            </label>
+            <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <span class="text-slate-300 group-hover:text-white">Ad spend is tracked against Customer Lifetime Value (LTV)</span>
+            </label>
+             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <span class="text-slate-300 group-hover:text-white">Leads receive an instant personalized follow-up (SMS/Email)</span>
+            </label>
+             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <span class="text-slate-300 group-hover:text-white">Sales team only speaks to qualified prospects</span>
+            </label>
+             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <span class="text-slate-300 group-hover:text-white">Content is CMS-managed, not hardcoded</span>
+            </label>
+             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <span class="text-slate-300 group-hover:text-white">Analytics dashboard shows real-time revenue, not just hits</span>
+            </label>
+             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <span class="text-slate-300 group-hover:text-white">Infrastructure scales automatically during traffic spikes</span>
+            </label>
+             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <span class="text-slate-300 group-hover:text-white">Customer support queries are partially handled by AI (Tier 1)</span>
+            </label>
+             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <span class="text-slate-300 group-hover:text-white">Deployment pipeline is automated (CI/CD)</span>
+            </label>
+        </div>
+
+        <div class="mt-8 border-t border-slate-700 pt-6">
+            <div class="flex justify-between items-center">
+                <span class="text-lg font-medium text-slate-300">Your Score:</span>
+                <span id="score-display" class="text-4xl font-bold text-blue-500">0/10</span>
+            </div>
+            <p id="score-message" class="text-right text-sm text-slate-400 mt-2">Select items to calculate.</p>
+        </div>
+    </div>
+
+    <!-- Intake Form -->
+    <div class="bg-slate-800/50 rounded-xl border border-slate-700 p-8">
+        <h3 class="text-xl font-bold text-white mb-4">Request a Full Technical Audit</h3>
+        <p class="text-slate-400 mb-6 text-sm">We'll dive deep into your stack and identify the exact bottlenecks costing you revenue.</p>
+        
+        <form name="audit-request" method="POST" data-netlify="true" class="space-y-4">
+             <input type="hidden" name="form-name" value="audit-request" />
+             <!-- Hidden field for checklist score -->
+             <input type="hidden" name="checklist-score" id="form-score" value="0" />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="name" class="block text-xs font-medium text-slate-400 uppercase mb-1">Name</label>
+                    <input type="text" id="name" name="name" required class="w-full rounded bg-slate-900 border border-slate-600 text-white px-4 py-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition" />
+                </div>
+                <div>
+                    <label for="email" class="block text-xs font-medium text-slate-400 uppercase mb-1">Work Email</label>
+                    <input type="email" id="email" name="email" required class="w-full rounded bg-slate-900 border border-slate-600 text-white px-4 py-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition" />
+                </div>
+            </div>
+            
+            <div>
+                <label for="company" class="block text-xs font-medium text-slate-400 uppercase mb-1">Company URL</label>
+                <input type="url" id="company" name="company" placeholder="https://" class="w-full rounded bg-slate-900 border border-slate-600 text-white px-4 py-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition" />
+            </div>
+
+            <div>
+                <label for="message" class="block text-xs font-medium text-slate-400 uppercase mb-1">Biggest Challenge</label>
+                <textarea id="message" name="message" rows="3" class="w-full rounded bg-slate-900 border border-slate-600 text-white px-4 py-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition"></textarea>
+            </div>
+
+            <button type="submit" class="w-full rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 transition shadow-lg shadow-blue-600/20">
+                Submit Request
+            </button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Simple client-side logic for the checklist
+    const checkboxes = document.querySelectorAll('#checklist-container input[type="checkbox"]');
+    const scoreDisplay = document.getElementById('score-display');
+    const scoreMessage = document.getElementById('score-message');
+    const formScoreInput = document.getElementById('form-score');
+
+    function updateScore() {
+        const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
+        scoreDisplay.textContent = `${checkedCount}/10`;
+        if (formScoreInput) formScoreInput.value = checkedCount.toString();
+
+        if (checkedCount < 4) {
+            scoreMessage.textContent = "Significant optimization opportunities available.";
+            scoreMessage.className = "text-right text-sm text-red-400 mt-2";
+        } else if (checkedCount < 8) {
+            scoreMessage.textContent = "Good foundation, but scaling may be hindered.";
+            scoreMessage.className = "text-right text-sm text-yellow-400 mt-2";
+        } else {
+            scoreMessage.textContent = "Excellent. You are ready for hyper-growth.";
+            scoreMessage.className = "text-right text-sm text-emerald-400 mt-2";
+        }
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', updateScore));
+</script>
