@@ -9,43 +9,43 @@
         <div id="checklist-container" class="space-y-3">
             <!-- Checklist items will be interactive -->
             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
                 <span class="text-slate-300 group-hover:text-white">Website loads in under 1.5 seconds (mobile)</span>
             </label>
             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
                 <span class="text-slate-300 group-hover:text-white">CRM is automatically updated with lead source</span>
             </label>
             <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
                 <span class="text-slate-300 group-hover:text-white">Ad spend is tracked against Customer Lifetime Value (LTV)</span>
             </label>
              <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
                 <span class="text-slate-300 group-hover:text-white">Leads receive an instant personalized follow-up (SMS/Email)</span>
             </label>
              <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
                 <span class="text-slate-300 group-hover:text-white">Sales team only speaks to qualified prospects</span>
             </label>
              <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
                 <span class="text-slate-300 group-hover:text-white">Content is CMS-managed, not hardcoded</span>
             </label>
              <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
                 <span class="text-slate-300 group-hover:text-white">Analytics dashboard shows real-time revenue, not just hits</span>
             </label>
              <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
                 <span class="text-slate-300 group-hover:text-white">Infrastructure scales automatically during traffic spikes</span>
             </label>
              <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
                 <span class="text-slate-300 group-hover:text-white">Customer support queries are partially handled by AI (Tier 1)</span>
             </label>
              <label class="flex items-center space-x-3 p-3 rounded hover:bg-slate-800 transition cursor-pointer group">
-                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900" />
+                <input type="checkbox" class="h-5 w-5 accent-blue-600 rounded border-slate-600 bg-slate-800 focus:ring-offset-slate-900 cursor-pointer" />
                 <span class="text-slate-300 group-hover:text-white">Deployment pipeline is automated (CI/CD)</span>
             </label>
         </div>
@@ -98,28 +98,37 @@
 </div>
 
 <script>
-    // Simple client-side logic for the checklist
-    const checkboxes = document.querySelectorAll('#checklist-container input[type="checkbox"]');
-    const scoreDisplay = document.getElementById('score-display');
-    const scoreMessage = document.getElementById('score-message');
-    const formScoreInput = document.getElementById('form-score');
+    function initChecklist() {
+        const checkboxes = document.querySelectorAll('#checklist-container input[type="checkbox"]');
+        const scoreDisplay = document.getElementById('score-display');
+        const scoreMessage = document.getElementById('score-message');
+        const formScoreInput = document.getElementById('form-score') as HTMLInputElement | null;
 
-    function updateScore() {
-        const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
-        scoreDisplay.textContent = `${checkedCount}/10`;
-        if (formScoreInput) formScoreInput.value = checkedCount.toString();
+        if (!scoreDisplay || !scoreMessage) return;
 
-        if (checkedCount < 4) {
-            scoreMessage.textContent = "Significant optimization opportunities available.";
-            scoreMessage.className = "text-right text-sm text-red-400 mt-2";
-        } else if (checkedCount < 8) {
-            scoreMessage.textContent = "Good foundation, but scaling may be hindered.";
-            scoreMessage.className = "text-right text-sm text-yellow-400 mt-2";
-        } else {
-            scoreMessage.textContent = "Excellent. You are ready for hyper-growth.";
-            scoreMessage.className = "text-right text-sm text-emerald-400 mt-2";
+        function updateScore() {
+            const checkedCount = Array.from(checkboxes).filter((cb: any) => cb.checked).length;
+            scoreDisplay!.textContent = `${checkedCount}/10`;
+            if (formScoreInput) formScoreInput.value = checkedCount.toString();
+
+            if (checkedCount < 4) {
+                scoreMessage!.textContent = "Significant optimization opportunities available.";
+                scoreMessage!.className = "text-right text-sm text-red-400 mt-2";
+            } else if (checkedCount < 8) {
+                scoreMessage!.textContent = "Good foundation, but scaling may be hindered.";
+                scoreMessage!.className = "text-right text-sm text-yellow-400 mt-2";
+            } else {
+                scoreMessage!.textContent = "Excellent. You are ready for hyper-growth.";
+                scoreMessage!.className = "text-right text-sm text-emerald-400 mt-2";
+            }
         }
+
+        checkboxes.forEach(cb => cb.addEventListener('change', updateScore));
     }
 
-    checkboxes.forEach(cb => cb.addEventListener('change', updateScore));
+    // Run on initial load
+    initChecklist();
+
+    // Run on view transitions (if enabled in Starlight)
+    document.addEventListener('astro:page-load', initChecklist);
 </script>
