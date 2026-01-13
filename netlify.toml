@@ -4,8 +4,3 @@
 
 [images]
   remote_images = []
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
