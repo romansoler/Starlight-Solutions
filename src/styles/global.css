@@ -1,32 +1,32 @@
 @import "tailwindcss";
 
-/* Dark Mode Enterprise Tech Theme */
+/* Tailcast-Inspired Dark Enterprise Theme */
 :root {
-	/* Main colors */
-	--sl-color-accent-low: #1e293b;
-	--sl-color-accent: #3b82f6;
-	--sl-color-accent-high: #93c5fd;
+    /* Tailcast Palette - Deeper, richer blacks/zincs */
+	--sl-color-accent-low: #1e1e24;
+	--sl-color-accent: #6366f1; /* Indigo-500 */
+	--sl-color-accent-high: #818cf8;
 	
-	/* Backgrounds */
 	--sl-color-white: #ffffff;
-	--sl-color-gray-1: #f1f5f9;
-	--sl-color-gray-2: #e2e8f0;
-	--sl-color-gray-3: #cbd5e1;
-	--sl-color-gray-4: #94a3b8;
-	--sl-color-gray-5: #64748b;
-	--sl-color-gray-6: #475569;
+	--sl-color-gray-1: #f3f4f6;
+	--sl-color-gray-2: #e5e7eb;
+	--sl-color-gray-3: #d1d5db;
+	--sl-color-gray-4: #9ca3af;
+	--sl-color-gray-5: #6b7280;
+	--sl-color-gray-6: #4b5563;
 	
-	--sl-color-black: #020617; /* Slate 950 */
-	--sl-color-bg: #020617;
-	--sl-color-bg-nav: #0f172a; /* Slate 900 */
-	--sl-color-bg-sidebar: #0f172a;
-	--sl-color-bg-inline-code: #1e293b;
+    /* The "Void" Black */
+	--sl-color-black: #111111; 
+	--sl-color-bg: #111111;
+	--sl-color-bg-nav: #111111; 
+	--sl-color-bg-sidebar: #111111;
+	--sl-color-bg-inline-code: #27272a;
 	
-	/* Borders */
-	--sl-color-hairline-light: #334155;
-	--sl-color-hairline: #1e293b;
+	/* Borders - Subtle Glass */
+	--sl-color-hairline-light: #3f3f46;
+	--sl-color-hairline: #27272a;
 	
-    /* Typography adjustments for "sharp" look */
+    /* Typography */
     --sl-text-sm: 0.875rem;
     --sl-text-base: 1rem;
     --sl-text-lg: 1.125rem;
@@ -35,51 +35,68 @@
     --sl-text-3xl: 1.875rem;
     --sl-text-4xl: 2.25rem;
     --sl-text-5xl: 3rem;
-    --sl-text-6xl: 3.75rem;
+    --sl-text-6xl: 4rem;
 
-    /* LAYOUT OVERRIDE: Widen the content area for Marketing/Enterprise look */
+    /* Wide Layout for SaaS Vibe */
     --sl-content-width: 80rem; 
 }
 
-/* Force dark mode preference if not auto-detected, 
-   though Starlight handles this via config usually. 
-   We want the 'dark' look to be the primary one. */
+/* Force Dark Mode */
 :root[data-theme='light'] {
-    /* Invert for light mode if user switches, but keep it "Enterprise" clean */
-    --sl-color-accent-low: #dbeafe;
-	--sl-color-accent: #2563eb;
-	--sl-color-accent-high: #1e40af;
+    /* Even in light mode, keep it tech-focused but clean */
     --sl-color-bg: #ffffff;
-    --sl-color-bg-nav: #f8fafc;
-    --sl-color-bg-sidebar: #f8fafc;
+    --sl-color-bg-nav: #ffffff;
+    --sl-color-bg-sidebar: #f9fafb;
+    --sl-color-accent: #4f46e5;
 }
 
-/* Sharper corners for a more "tech" feel */
+/* Starlight Overrides for "Glass" feel */
 .sl-markdown-content pre {
-    border-radius: 4px;
-    border: 1px solid var(--sl-color-hairline-light);
+    border-radius: 0.75rem; /* Rounded-xl */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #18181b !important; /* Zinc-900 */
 }
 
 img {
-    border-radius: 4px;
+    border-radius: 0.75rem;
 }
 
-/* Sidebar adjustments */
+/* Sidebar */
 .sidebar-content {
-    border-right: 1px solid var(--sl-color-hairline);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Custom Checkbox Styling for Audit Page */
+/* 
+   CUSTOM UTILITIES FOR TAILCAST LOOK 
+   (These would ideally be in tailwind.config, but here for speed)
+*/
+
+.glass-panel {
+    background: rgba(30, 30, 35, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #818cf8, #c084fc); /* Indigo to Purple */
+}
+
+/* Custom Checkbox */
 input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
-  background-color: var(--sl-color-bg-inline-code);
+  background-color: #27272a;
   margin: 0;
   font: inherit;
   color: currentColor;
   width: 1.25em;
   height: 1.25em;
-  border: 1px solid var(--sl-color-gray-5);
+  border: 1px solid #52525b;
   border-radius: 0.25em;
   display: grid;
   place-content: center;
@@ -92,7 +109,7 @@ input[type="checkbox"]::before {
   height: 0.65em;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em var(--sl-color-accent);
+  box-shadow: inset 1em 1em #6366f1; /* Indigo-500 */
   transform-origin: center;
   clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
@@ -102,6 +119,6 @@ input[type="checkbox"]:checked::before {
 }
 
 input[type="checkbox"]:focus {
-  outline: 2px solid var(--sl-color-accent);
+  outline: 2px solid #6366f1;
   outline-offset: 2px;
 }
